@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * @file
+ * Code for the i5k_organism_config feature.
+ */
+
+include_once 'i5k_organism_config.features.inc';
