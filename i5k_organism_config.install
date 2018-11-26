@@ -1,0 +1,21 @@
+<?php
+
+//Implements hook install.
+
+function i5k_organism_config_install() {
+
+  $term = tripal_insert_cvterm([
+    'id' => 'local:user_assembled_organism_genome',
+    'name' => 'user_assembled_organism_genome',
+    'cv_name' => 'local',
+    'definition' => 'Did the submitter assemble this genome themselves?',
+  ]);
+
+  $term = tripal_insert_cvterm([
+    'id' => 'local:submitter_plans',
+    'name' => 'submitter_plans',
+    'cv_name' => 'local',
+    'definition' => 'What are the users plans for this genome?',
+  ]);
+
+}
