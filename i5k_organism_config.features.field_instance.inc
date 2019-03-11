@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * i5k_organism_config.features.field_instance.inc
@@ -10,6 +9,64 @@
  */
 function i5k_organism_config_field_default_field_instances() {
   $field_instances = array();
+
+  // Exported field_instance:
+  // 'TripalEntity-bio_data_1-bio_data_1_resource_links'.
+  $field_instances['TripalEntity-bio_data_1-bio_data_1_resource_links'] = array(
+    'bundle' => 'bio_data_1',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'TripalEntity',
+    'field_name' => 'bio_data_1_resource_links',
+    'label' => 'Links',
+    'required' => FALSE,
+    'settings' => array(
+      'absolute_url' => 0,
+      'attributes' => array(
+        'class' => '',
+        'rel' => '',
+        'target' => 'default',
+      ),
+      'auto_attach' => TRUE,
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'term_accession' => 'url',
+      'term_fixed' => FALSE,
+      'term_name' => 'url',
+      'term_vocabulary' => 'schema',
+      'title' => 'optional',
+      'title_label_use_field_label' => FALSE,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 0,
+    ),
+    'widget' => array(
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 40,
+    ),
+  );
 
   // Exported field_instance: 'TripalEntity-bio_data_1-data__image'.
   $field_instances['TripalEntity-bio_data_1-data__image'] = array(
@@ -268,6 +325,148 @@ function i5k_organism_config_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'TripalEntity-bio_data_1-internal__image_credit'.
+  $field_instances['TripalEntity-bio_data_1-internal__image_credit'] = array(
+    'bundle' => 'bio_data_1',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'tripal',
+        'settings' => array(),
+        'type' => 'chado_linker__prop_formatter',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'TripalEntity',
+    'field_name' => 'internal__image_credit',
+    'label' => 'Image Credit',
+    'required' => FALSE,
+    'settings' => array(
+      'auto_attach' => TRUE,
+      'base_table' => 'organism',
+      'chado_column' => 'organism_dbxref_id',
+      'chado_table' => 'organismprop',
+      'rows' => 1,
+      'term_accession' => 'image_credit',
+      'term_fixed' => FALSE,
+      'term_name' => 'Image Credit',
+      'term_vocabulary' => 'internal',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'tripal',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'chado_linker__prop_widget',
+      'weight' => 46,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'TripalEntity-bio_data_1-internal__number_of_genes'.
+  $field_instances['TripalEntity-bio_data_1-internal__number_of_genes'] = array(
+    'bundle' => 'bio_data_1',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'tripal',
+        'settings' => array(),
+        'type' => 'chado_linker__prop_formatter',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'TripalEntity',
+    'field_name' => 'internal__number_of_genes',
+    'label' => 'Number Of Genes',
+    'required' => FALSE,
+    'settings' => array(
+      'auto_attach' => TRUE,
+      'base_table' => 'organism',
+      'chado_column' => 'organism_dbxref_id',
+      'chado_table' => 'organismprop',
+      'rows' => 1,
+      'term_accession' => 'n_genes',
+      'term_fixed' => FALSE,
+      'term_name' => 'Number of Genes',
+      'term_vocabulary' => 'internal',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'tripal',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'chado_linker__prop_widget',
+      'weight' => 49,
+    ),
+  );
+
+  // Exported field_instance: 'TripalEntity-bio_data_1-internal__scaffold_n50'.
+  $field_instances['TripalEntity-bio_data_1-internal__scaffold_n50'] = array(
+    'bundle' => 'bio_data_1',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'tripal',
+        'settings' => array(),
+        'type' => 'chado_linker__prop_formatter',
+        'weight' => 17,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'TripalEntity',
+    'field_name' => 'internal__scaffold_n50',
+    'label' => 'Scaffold N50',
+    'required' => FALSE,
+    'settings' => array(
+      'auto_attach' => TRUE,
+      'base_table' => 'organism',
+      'chado_column' => 'organism_dbxref_id',
+      'chado_table' => 'organismprop',
+      'rows' => 1,
+      'term_accession' => 'scaffold_n50',
+      'term_fixed' => FALSE,
+      'term_name' => 'Scaffold n50',
+      'term_vocabulary' => 'internal',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'tripal',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'chado_linker__prop_widget',
+      'weight' => 51,
+    ),
+  );
+
   // Exported field_instance: 'TripalEntity-bio_data_1-local__abbreviation'.
   $field_instances['TripalEntity-bio_data_1-local__abbreviation'] = array(
     'bundle' => 'bio_data_1',
@@ -358,6 +557,148 @@ function i5k_organism_config_field_default_field_instances() {
       'settings' => array(),
       'type' => 'local__analysis_browser_widget',
       'weight' => 15,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'TripalEntity-bio_data_1-local__community_contact'.
+  $field_instances['TripalEntity-bio_data_1-local__community_contact'] = array(
+    'bundle' => 'bio_data_1',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'tripal',
+        'settings' => array(),
+        'type' => 'chado_linker__prop_formatter',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'TripalEntity',
+    'field_name' => 'local__community_contact',
+    'label' => 'Community Contact',
+    'required' => FALSE,
+    'settings' => array(
+      'auto_attach' => TRUE,
+      'base_table' => 'organism',
+      'chado_column' => 'organism_dbxref_id',
+      'chado_table' => 'organismprop',
+      'rows' => 1,
+      'term_accession' => 'community_contact',
+      'term_fixed' => FALSE,
+      'term_name' => 'Community Contact',
+      'term_vocabulary' => 'local',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'tripal',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'chado_linker__prop_widget',
+      'weight' => 48,
+    ),
+  );
+
+  // Exported field_instance: 'TripalEntity-bio_data_1-local__contig_n50'.
+  $field_instances['TripalEntity-bio_data_1-local__contig_n50'] = array(
+    'bundle' => 'bio_data_1',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The size of the n50 contig.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'tripal',
+        'settings' => array(),
+        'type' => 'chado_linker__prop_formatter',
+        'weight' => 16,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'TripalEntity',
+    'field_name' => 'local__contig_n50',
+    'label' => 'Contig N50',
+    'required' => FALSE,
+    'settings' => array(
+      'auto_attach' => TRUE,
+      'base_table' => 'organism',
+      'chado_column' => 'organism_dbxref_id',
+      'chado_table' => 'organismprop',
+      'rows' => 1,
+      'term_accession' => 'contig_n50',
+      'term_fixed' => FALSE,
+      'term_name' => 'contig n50',
+      'term_vocabulary' => 'local',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'tripal',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'chado_linker__prop_widget',
+      'weight' => 50,
+    ),
+  );
+
+  // Exported field_instance: 'TripalEntity-bio_data_1-local__gc_content'.
+  $field_instances['TripalEntity-bio_data_1-local__gc_content'] = array(
+    'bundle' => 'bio_data_1',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '% GC',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'tripal',
+        'settings' => array(),
+        'type' => 'chado_linker__prop_formatter',
+        'weight' => 13,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'TripalEntity',
+    'field_name' => 'local__gc_content',
+    'label' => 'GC Content',
+    'required' => FALSE,
+    'settings' => array(
+      'auto_attach' => TRUE,
+      'base_table' => 'organism',
+      'chado_column' => 'organism_dbxref_id',
+      'chado_table' => 'organismprop',
+      'rows' => 1,
+      'term_accession' => 'gc_content',
+      'term_fixed' => FALSE,
+      'term_name' => 'GC Content',
+      'term_vocabulary' => 'local',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'tripal',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'chado_linker__prop_widget',
+      'weight' => 47,
     ),
   );
 
@@ -932,6 +1273,7 @@ function i5k_organism_config_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('% GC');
   t('Abbreviation');
   t('An image for the organism');
   t('Analyses');
@@ -940,27 +1282,35 @@ function i5k_organism_config_field_default_field_instances() {
   t('Annotations that are associated with this record.');
   t('Briefly describe your plans for this genome project (e.g. are you interested in community curation?)');
   t('Common Name');
+  t('Community Contact');
+  t('Contig N50');
   t('Cross Reference');
   t('Description');
   t('Display a set of analyses related to an organism');
   t('Displays libraries (BAC, YAC etc) associated with this entity.');
+  t('GC Content');
   t('Genome Browser');
   t('Genus');
+  t('Image Credit');
   t('Infraspecific Taxon');
   t('Libraries');
+  t('Links');
   t('List the genomes for an organism');
   t('NCBI_taxonomy_id');
+  t('Number Of Genes');
   t('Organism Image');
   t('Other records with relationships to this record.');
   t('Please lookup your organism on NCBI at https://www.ncbi.nlm.nih.gov/taxonomy');
   t('Publication');
   t('Relationship');
   t('Resource Type');
+  t('Scaffold N50');
   t('Species');
   t('Submitter assembled genome');
   t('The IDs where this record may be available in other external online databases.');
   t('The Infraspecific Taxon.');
   t('The resource type');
+  t('The size of the n50 contig.');
   t('The transcriptome associated with this entity');
   t('This record has been referenced or is sourced from these publications.');
   t('Transcriptome');
