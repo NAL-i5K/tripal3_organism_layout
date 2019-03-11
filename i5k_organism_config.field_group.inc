@@ -39,6 +39,34 @@ function i5k_organism_config_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'gp_sbo__database_cross_refe5357|TripalEntity|bio_data_1|default';
+  $field_group->group_name = 'gp_sbo__database_cross_refe5357';
+  $field_group->entity_type = 'TripalEntity';
+  $field_group->bundle = 'bio_data_1';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Cross Reference',
+    'weight' => '2',
+    'children' => array(
+      0 => 'sbo__database_cross_reference',
+    ),
+    'format_type' => 'tripalpane',
+    'format_settings' => array(
+      'label' => 'Cross Reference',
+      'instance_settings' => array(
+        'id' => 'tripal_ds-fieldset-gp_sbo__database_cross_refe5357',
+        'classes' => 'gp_sbo__database_cross_refe5357 field-group-tripalpane',
+        'description' => '',
+        'hide' => 1,
+      ),
+    ),
+  );
+  $field_groups['gp_sbo__database_cross_refe5357|TripalEntity|bio_data_1|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'gp_sbo__relationship57023|TripalEntity|bio_data_1|default';
   $field_group->group_name = 'gp_sbo__relationship57023';
   $field_group->entity_type = 'TripalEntity';
@@ -120,6 +148,34 @@ function i5k_organism_config_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_analyses|TripalEntity|bio_data_1|default';
+  $field_group->group_name = 'group_analyses';
+  $field_group->entity_type = 'TripalEntity';
+  $field_group->bundle = 'bio_data_1';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Analyses',
+    'weight' => '5',
+    'children' => array(
+      0 => 'local__analysis_browser',
+    ),
+    'format_type' => 'tripalpane',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-analyses field-group-tripalpane',
+        'id' => '',
+        'hide' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_analyses|TripalEntity|bio_data_1|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_assembly_annotations|TripalEntity|bio_data_1|default';
   $field_group->group_name = 'group_assembly_annotations';
   $field_group->entity_type = 'TripalEntity';
@@ -142,6 +198,39 @@ function i5k_organism_config_field_group_info() {
     ),
   );
   $field_groups['group_assembly_annotations|TripalEntity|bio_data_1|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_details_props|TripalEntity|bio_data_1|default';
+  $field_group->group_name = 'group_details_props';
+  $field_group->entity_type = 'TripalEntity';
+  $field_group->bundle = 'bio_data_1';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Details',
+    'weight' => '4',
+    'children' => array(
+      0 => 'internal__scaffold_n50',
+      1 => 'internal__number_of_genes',
+      2 => 'local__contig_n50',
+      3 => 'internal__image_credit',
+      4 => 'local__gc_content',
+      5 => 'local__community_contact',
+    ),
+    'format_type' => 'tripalpane',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-details-props field-group-tripalpane',
+        'id' => '',
+        'hide' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_details_props|TripalEntity|bio_data_1|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -261,6 +350,66 @@ function i5k_organism_config_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_links_table|TripalEntity|bio_data_1|default';
+  $field_group->group_name = 'group_links_table';
+  $field_group->entity_type = 'TripalEntity';
+  $field_group->bundle = 'bio_data_1';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_links';
+  $field_group->data = array(
+    'label' => 'links table',
+    'weight' => '13',
+    'children' => array(
+      0 => 'bio_data_1_resource_links',
+    ),
+    'format_type' => 'table',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'label_visibility' => 3,
+        'desc' => '',
+        'first_column' => '',
+        'second_column' => '',
+        'empty_label_behavior' => 1,
+        'table_row_striping' => FALSE,
+        'always_show_field_label' => FALSE,
+        'classes' => 'group-links-table field-group-table',
+      ),
+    ),
+  );
+  $field_groups['group_links_table|TripalEntity|bio_data_1|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_links|TripalEntity|bio_data_1|default';
+  $field_group->group_name = 'group_links';
+  $field_group->entity_type = 'TripalEntity';
+  $field_group->bundle = 'bio_data_1';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Links',
+    'weight' => '3',
+    'children' => array(
+      0 => 'group_links_table',
+    ),
+    'format_type' => 'tripalpane',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-links field-group-tripalpane',
+        'id' => '',
+        'hide' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_links|TripalEntity|bio_data_1|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_summary_table|TripalEntity|bio_data_1|default';
   $field_group->group_name = 'group_summary_table';
   $field_group->entity_type = 'TripalEntity';
@@ -326,17 +475,20 @@ function i5k_organism_config_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Analyses');
   t('Annotations');
   t('Assembly and Annotation');
   t('Cross Reference');
   t('Details');
   t('External Links');
   t('Files');
+  t('Links');
   t('Organism details');
   t('Publication');
   t('Relationship');
   t('Summary');
   t('Summary Table');
+  t('links table');
 
   return $field_groups;
 }
