@@ -13,6 +13,7 @@ dependencies[] = options
 dependencies[] = text
 dependencies[] = tripal
 dependencies[] = tripal_chado
+dependencies[] = tripal_manage_analyses
 features[ctools][] = field_group:field_group:1
 features[features_api][] = api:2
 features[field_base][] = data__image
