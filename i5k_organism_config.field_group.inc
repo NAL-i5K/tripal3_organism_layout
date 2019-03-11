@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * i5k_organism_config.field_group.inc
@@ -12,7 +11,7 @@ function i5k_organism_config_field_group_info() {
   $field_groups = array();
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'gp_sbo__database_cross_refe10131|TripalEntity|bio_data_1|default';
   $field_group->group_name = 'gp_sbo__database_cross_refe10131';
@@ -49,9 +48,7 @@ function i5k_organism_config_field_group_info() {
   $field_group->data = array(
     'label' => 'Relationship',
     'weight' => '5',
-    'children' => array(
-      0 => 'sbo__relationship',
-    ),
+    'children' => array(),
     'format_type' => 'fieldset',
     'format_settings' => array(
       'label' => 'Relationship',
@@ -78,9 +75,7 @@ function i5k_organism_config_field_group_info() {
   $field_group->data = array(
     'label' => 'Publication',
     'weight' => '3',
-    'children' => array(
-      0 => 'schema__publication',
-    ),
+    'children' => array(),
     'format_type' => 'fieldset',
     'format_settings' => array(
       'label' => 'Publication',
@@ -107,9 +102,7 @@ function i5k_organism_config_field_group_info() {
   $field_group->data = array(
     'label' => 'Annotations',
     'weight' => '6',
-    'children' => array(
-      0 => 'sio__annotation',
-    ),
+    'children' => array(),
     'format_type' => 'fieldset',
     'format_settings' => array(
       'label' => 'Annotations',
@@ -135,10 +128,8 @@ function i5k_organism_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Assembly and Annotation',
-    'weight' => '3',
-    'children' => array(
-      0 => 'local__analysis_browser',
-    ),
+    'weight' => '6',
+    'children' => array(),
     'format_type' => 'tripalpane',
     'format_settings' => array(
       'formatter' => '',
@@ -163,11 +154,11 @@ function i5k_organism_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Details',
-    'weight' => '4',
+    'weight' => '7',
     'children' => array(
-      0 => 'gp_schema__publication87346',
+      0 => 'gp_sio__annotation23397',
       1 => 'gp_sbo__relationship57023',
-      2 => 'gp_sio__annotation23397',
+      2 => 'gp_schema__publication87346',
     ),
     'format_type' => 'tripalpane',
     'format_settings' => array(
@@ -226,10 +217,8 @@ function i5k_organism_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'External Links',
-    'weight' => '6',
-    'children' => array(
-      0 => 'sbo__database_cross_reference',
-    ),
+    'weight' => '10',
+    'children' => array(),
     'format_type' => 'tripalpane',
     'format_settings' => array(
       'formatter' => '',
@@ -254,7 +243,7 @@ function i5k_organism_config_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Files',
-    'weight' => '5',
+    'weight' => '8',
     'children' => array(),
     'format_type' => 'tripalpane',
     'format_settings' => array(
@@ -280,9 +269,15 @@ function i5k_organism_config_field_group_info() {
   $field_group->parent_name = 'group_summary_tripalpane';
   $field_group->data = array(
     'label' => 'Summary Table',
-    'weight' => '2',
+    'weight' => '11',
     'children' => array(
-      0 => 'schema__description',
+      0 => 'local__abbreviation',
+      1 => 'taxrank__species',
+      2 => 'taxrank__genus',
+      3 => 'ncbitaxon__common_name',
+      4 => 'data__image',
+      5 => 'schema__description',
+      6 => 'rdfs__type',
     ),
     'format_type' => 'table',
     'format_settings' => array(
