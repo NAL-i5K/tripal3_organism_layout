@@ -18,4 +18,11 @@ function i5k_organism_config_install() {
     'definition' => 'What are the users plans for this genome?',
   ]);
 
+  $term = tripal_insert_cvterm([
+    'id' => 'data:1179',
+    'name' => 'NCBI taxonomy ID',
+    'cv_name' => 'EDAM',
+    'definition' => 'A stable unique identifier for each taxon (for a species, a family, an order, or any other group in the NCBI taxonomy database.',
+  ]);
+
 }
