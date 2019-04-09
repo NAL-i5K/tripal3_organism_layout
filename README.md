@@ -1,3 +1,7 @@
+# WARNING
+This module uses the Drupal features module. Some components of Drupal features are incompatible with Tripal entities.  Please use at your own risk.
+
+# Organism layout
 This module will configure your organism widget display to look like this for end users:
 
 ![image display](docs/i5k_organism.png)
